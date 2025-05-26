@@ -1,26 +1,298 @@
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>sleek-api-masterpiece</title>
-    <meta name="description" content="Lovable Generated Project" />
-    <meta name="author" content="Lovable" />
+    <title>Wataru API - Advanced REST API Documentation</title>
+    <meta name="description" content="Simple and Easy-to-Use API Documentation with Cyberpunk Design" />
+    <meta name="author" content="Wataru" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
 
-    <meta property="og:title" content="sleek-api-masterpiece" />
-    <meta property="og:description" content="Lovable Generated Project" />
+    <meta property="og:title" content="Wataru API - Advanced REST API Documentation" />
+    <meta property="og:description" content="Simple and Easy-to-Use API Documentation with Cyberpunk Design" />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta property="og:image" content="/lovable-uploads/1fcf97e0-b02e-407c-9472-a625628a2b26.png" />
 
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@lovable_dev" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <meta name="twitter:image" content="/lovable-uploads/1fcf97e0-b02e-407c-9472-a625628a2b26.png" />
   </head>
 
   <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-    <script type="module" src="/src/main.tsx"></script>
+    <div class="app-container">
+      <!-- Background Effects -->
+      <div class="background-effects">
+        <div class="grid-overlay"></div>
+        <div class="floating-particles"></div>
+      </div>
+
+      <!-- Sidebar -->
+      <aside class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+          <div class="logo">
+            <div class="logo-icon">
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                <path d="M16 2L30 16L16 30L2 16L16 2Z" fill="url(#gradient1)" stroke="#00d9ff" stroke-width="2"/>
+                <defs>
+                  <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" style="stop-color:#8b5cf6"/>
+                    <stop offset="100%" style="stop-color:#00d9ff"/>
+                  </linearGradient>
+                </defs>
+              </svg>
+            </div>
+            <span class="logo-text">Wataru API</span>
+          </div>
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path d="M3 5h14M3 10h14M3 15h14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <nav class="sidebar-nav">
+          <div class="nav-section">
+            <div class="nav-item active" data-section="ai">
+              <div class="nav-icon">🤖</div>
+              <span class="nav-text">AI</span>
+              <span class="nav-count">1</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#ai-chat" class="nav-subitem">Chat Completion</a>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-item" data-section="anime">
+              <div class="nav-icon">🎌</div>
+              <span class="nav-text">Anime</span>
+              <span class="nav-count">7</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#anime-search" class="nav-subitem">Search Anime</a>
+              <a href="#anime-details" class="nav-subitem">Get Details</a>
+              <a href="#anime-trending" class="nav-subitem">Trending</a>
+              <a href="#anime-seasons" class="nav-subitem">Seasons</a>
+              <a href="#anime-genres" class="nav-subitem">Genres</a>
+              <a href="#anime-studios" class="nav-subitem">Studios</a>
+              <a href="#anime-characters" class="nav-subitem">Characters</a>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-item" data-section="downloader">
+              <div class="nav-icon">⬇️</div>
+              <span class="nav-text">Downloader</span>
+              <span class="nav-count">5</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#download-video" class="nav-subitem">Video Download</a>
+              <a href="#download-audio" class="nav-subitem">Audio Extract</a>
+              <a href="#download-playlist" class="nav-subitem">Playlist</a>
+              <a href="#download-status" class="nav-subitem">Status Check</a>
+              <a href="#download-formats" class="nav-subitem">Formats</a>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-item" data-section="manga">
+              <div class="nav-icon">📚</div>
+              <span class="nav-text">Manga</span>
+              <span class="nav-count">2</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#manga-search" class="nav-subitem">Search Manga</a>
+              <a href="#manga-chapters" class="nav-subitem">Get Chapters</a>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-item" data-section="search">
+              <div class="nav-icon">🔍</div>
+              <span class="nav-text">Search</span>
+              <span class="nav-count">1</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#global-search" class="nav-subitem">Global Search</a>
+            </div>
+          </div>
+
+          <div class="nav-section">
+            <div class="nav-item" data-section="examples">
+              <div class="nav-icon">💡</div>
+              <span class="nav-text">Examples</span>
+              <span class="nav-count">3</span>
+              <div class="nav-arrow">›</div>
+            </div>
+            <div class="nav-subitems">
+              <a href="#quick-start" class="nav-subitem">Quick Start</a>
+              <a href="#authentication" class="nav-subitem">Authentication</a>
+              <a href="#rate-limiting" class="nav-subitem">Rate Limiting</a>
+            </div>
+          </div>
+        </nav>
+
+        <div class="sidebar-footer">
+          <div class="status-indicator">
+            <div class="status-dot online"></div>
+            <span>API Online</span>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-content">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              </svg>
+            </button>
+            
+            <div class="search-container">
+              <div class="search-box">
+                <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M9 17A8 8 0 109 1a8 8 0 000 16zM19 19l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <input type="text" placeholder="Search endpoints..." id="searchInput">
+              </div>
+            </div>
+
+            <div class="header-actions">
+              <button class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 1L13 7L19 7L14.5 11L16 17L10 14L4 17L5.5 11L1 7L7 7L10 1Z" fill="currentColor"/>
+                </svg>
+              </button>
+              <button class="action-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M10 18C14.4183 18 18 14.4183 18 10C18 5.58172 14.4183 2 10 2C5.58172 2 2 5.58172 2 10C2 14.4183 5.58172 18 10 18Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M10 6V10L13 13" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        <!-- Hero Section -->
+        <section class="hero">
+          <div class="hero-background">
+            <img src="/lovable-uploads/1fcf97e0-b02e-407c-9472-a625628a2b26.png" alt="Cyberpunk City" class="hero-image">
+            <div class="hero-overlay"></div>
+          </div>
+          
+          <div class="hero-content">
+            <div class="hero-badge">
+              <span class="badge-text">Wataru UI</span>
+            </div>
+            <h1 class="hero-title">Wataru API</h1>
+            <p class="hero-subtitle">Simple and Easy-to-Use API Documentation</p>
+            
+            <div class="hero-status">
+              <div class="status-indicator">
+                <div class="status-dot online pulse"></div>
+                <span>Online</span>
+              </div>
+            </div>
+
+            <div class="hero-actions">
+              <button class="btn btn-primary" id="sourceCodeBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M6 8L2 12L6 16M14 8L18 12L14 16M11 4L9 20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                Source Code
+              </button>
+              <button class="btn btn-secondary" id="contactMeBtn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M3 8L10 13L17 8M3 6H17C18.1 6 19 6.9 19 8V16C19 17.1 18.1 18 17 18H3C1.9 18 1 17.1 1 16V8C1 6.9 1.9 6 3 6Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+                Contact Me
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <!-- Stats Dashboard -->
+        <section class="stats-dashboard">
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-icon blue">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">Total APIs</div>
+                <div class="stat-value" data-count="19">0</div>
+                <div class="stat-sublabel">endpoints</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon green">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M4 6H20M4 10H20M4 14H20M4 18H16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">Categories</div>
+                <div class="stat-value" data-count="7">0</div>
+                <div class="stat-sublabel">groups</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon cyan">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 16L12 11L17 16M7 8L12 3L17 8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">GET Endpoints</div>
+                <div class="stat-value" data-count="17">0</div>
+                <div class="stat-sublabel">endpoints</div>
+              </div>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-icon orange">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M7 8L12 13L17 8M7 16L12 21L17 16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="stat-content">
+                <div class="stat-label">POST Endpoints</div>
+                <div class="stat-value" data-count="2">0</div>
+                <div class="stat-sublabel">endpoints</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- API Documentation Content -->
+        <section class="documentation-content">
+          <div class="content-header">
+            <h2>API Documentation</h2>
+            <p>Explore our comprehensive REST API with detailed examples and interactive testing.</p>
+          </div>
+
+          <div class="endpoint-sections" id="endpointSections">
+            <!-- Dynamic content will be inserted here -->
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
